@@ -1,0 +1,11 @@
+build.hxml
+
+--next
+-D js-es=6
+--js bin/tests.js
+
+--next
+-neko ./bin/tests.n
+
+--next
+-python ./bin/tests.py

@@ -11,5 +11,5 @@
 -D coverage-console-missing-reporter
 -D coverage-lcov-reporter
 
-
--php bin
+--each
+-php bin/php-tests
