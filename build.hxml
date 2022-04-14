@@ -1,0 +1,7 @@
+-cp src
+-lib utest
+-main tests.TestLoader
+# -dce full
+-D analyzer-optimize
+
+-php bin
