@@ -25,7 +25,7 @@ class Permuter<K> {
         itemLength = array.length;
         numberOfPermutations = itemLength.factorial();
 
-        for(i in 0...itemLength) {
+        for(i in 0...itemLength+1) {
             c[i] = 0;
         }
     }
