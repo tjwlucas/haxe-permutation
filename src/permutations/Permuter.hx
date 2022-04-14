@@ -1,6 +1,6 @@
 package permutations;
 
-using permutations.ArrayTools;
+using permutations.Util;
 
 class Permuter<K> {
     var original : Array<K>;
@@ -16,22 +16,12 @@ class Permuter<K> {
         original = array;
         currentItem = original;
         itemLength = array.length;
-        numberOfPermutations = factorial(itemLength);
+        numberOfPermutations = itemLength.factorial();
 
         for(i in 0...itemLength) {
             c[i] = 0;
         }
     }
-
-    static function factorial(n:Int) {
-        var value = 1;
-        for(i in 0...n) {
-            value *= i+1;
-        }
-        return value;
-    }
-
-
 
     public function hasNext() {
         return currentItemIndex < numberOfPermutations;

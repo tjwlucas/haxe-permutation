@@ -8,3 +8,11 @@ function swap<T>(arr: Array<T>, a:Int, b:Int) {
     arr[b] = item_a;
     return arr;
 }
+
+function factorial(n:Int) {
+    var value = 1;
+    for(i in 0...n) {
+        value *= i+1;
+    }
+    return value;
+}

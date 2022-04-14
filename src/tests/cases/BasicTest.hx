@@ -4,15 +4,15 @@ import utest.Assert;
 import permutations.Permuter;
 import utest.Test;
 
-using permutations.ArrayTools;
+using permutations.Util;
 
 class BasicTest extends Test {
     function specFactorial() {
-        @:privateAccess Permuter.factorial(1) == 1;
-        @:privateAccess Permuter.factorial(2) == 2;
-        @:privateAccess Permuter.factorial(3) == 6;
-        @:privateAccess Permuter.factorial(4) == 24;
-        @:privateAccess Permuter.factorial(5) == 120;
+        1.factorial() == 1;
+        2.factorial() == 2;
+        3.factorial() == 6;
+        4.factorial() == 24;
+        5.factorial() == 120;
     }
 
     function specNumberOfPermutations() {
