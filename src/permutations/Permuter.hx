@@ -2,6 +2,13 @@ package permutations;
 
 using permutations.Util;
 
+/**
+    Iterable class returning successive permutations of a provided array, covering every possible permutation.
+    Uses Heap's algorithm to generate the permutations.
+
+    WARNING:
+    As may be obvious, any given 
+**/
 class Permuter<K> {
     var original : Array<K>;
     var itemLength : Int;
