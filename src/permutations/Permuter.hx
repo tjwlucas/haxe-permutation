@@ -15,13 +15,13 @@ class Permuter<K> {
     var numberOfPermutations : Int;
 
     var currentItemIndex : Int = 0;
-    var currentItem : Array<K>;
+    var nextItem : Array<K>;
 
     var c : Array<Int> = [];
 
     public function new(array:Array<K>) {
         original = array;
-        currentItem = original;
+        nextItem = original.copy();
         itemLength = array.length;
         numberOfPermutations = itemLength.factorial();
 
@@ -36,13 +36,13 @@ class Permuter<K> {
 
     var i = 0;
     public function next() {
-        var nextItem = currentItem.copy();
+        var currentItem = nextItem.copy();
 
         if(c[i] < i) {
             if(i % 2 == 0) {
-                currentItem.swap(0, i);
+                nextItem.swap(0, i);
             } else {
-                currentItem.swap(c[i], i);
+                nextItem.swap(c[i], i);
             }
             c[i]++;
             i = 0;
@@ -53,6 +53,6 @@ class Permuter<K> {
             next();
         }        
 
-        return nextItem;
+        return currentItem;
     }
 }
