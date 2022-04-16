@@ -18,26 +18,31 @@ class PermuterTest extends Test {
         var permuter = new Permuter(testArray);
         var allPermutations = [for(p in permuter) p];
         allPermutations.length == 1.factorial();
+        permuter.length == allPermutations.length;
 
         var testArray = [1];
         var permuter = new Permuter(testArray);
         var allPermutations = [for(p in permuter) p];
         allPermutations.length == 1.factorial();
+        permuter.length == allPermutations.length;
 
         var testArray = [1,2,3];
         var permuter = new Permuter(testArray);
         var allPermutations = [for(p in permuter) p];
         allPermutations.length == 3.factorial();
+        permuter.length == allPermutations.length;
 
         var testArray = [1,2,3,4];
         var permuter = new Permuter(testArray);
         var allPermutations = [for(p in permuter) p];
         allPermutations.length == 4.factorial();
+        permuter.length == allPermutations.length;
 
         var testArray = ['a', 'b', 'c', 'd'];
         var permuter = new Permuter(testArray);
         var allPermutations = [for(p in permuter) p];
         allPermutations.length == 4.factorial();
+        permuter.length == allPermutations.length;
     }
 
     /**

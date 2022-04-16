@@ -31,6 +31,10 @@ class Permuter<K> {
         }
     }
 
+    public var length(get, never) : Int;
+    function get_length() : Int {
+        return numberOfPermutations;
+    }
     public function hasNext() {
         return currentItemIndex < numberOfPermutations;
     }
