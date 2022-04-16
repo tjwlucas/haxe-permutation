@@ -1,0 +1,16 @@
+{
+    "name": "permutation",
+    "url": "https://github.com/tjwlucas/haxe-permutation",
+    "license": "MIT",
+    "tags": [],
+    "description": "Iterator to generate all permutations for a provided array",
+    "version": "",
+    "classPath": "src/",
+    "releasenote": "",
+    "contributors": [
+      "tlucas"
+    ],
+    "dependencies": {},
+    "main": ""
+  }
+  
