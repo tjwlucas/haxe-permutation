@@ -1,10 +1,10 @@
 package tests.cases;
 
 import utest.Assert;
-import permutations.Permuter;
+import permutation.Permuter;
 import utest.Test;
 
-using permutations.Util;
+using permutation.Util;
 
 @:depends(tests.cases.UtilTest)
 class PermuterTest extends Test {

@@ -1,7 +1,7 @@
 package tests.cases;
 import utest.Assert;
 import utest.Test;
-using permutations.Util;
+using permutation.Util;
 
 class UtilTest extends Test {
     function specFactorialRuntime() {

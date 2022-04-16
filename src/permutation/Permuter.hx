@@ -1,6 +1,6 @@
-package permutations;
+package permutation;
 
-using permutations.Util;
+using permutation.Util;
 
 /**
     Iterable class returning successive permutations of a provided array, covering every possible permutation.

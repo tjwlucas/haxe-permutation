@@ -1,4 +1,4 @@
-package permutations;
+package permutation;
 
 /**
     Swaps two elements on an array by index.
@@ -28,7 +28,7 @@ macro function factorial(n:ExprOf<Int>) : ExprOf<Int> {
             return macro $v{ value };
         }
         default: 
-            return macro @:privateAccess permutations.Util.factorialRuntime($n);
+            return macro @:privateAccess permutation.Util.factorialRuntime($n);
     }
 }
 
