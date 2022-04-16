@@ -1,6 +1,7 @@
 ---
 kind: pipeline
 type: docker
+name: Run Tests
 
 platform:
   os: linux
@@ -42,6 +43,36 @@ steps:
       - python ./bin/tests.py
     depends_on:
       - Build
+
+---
+kind: pipeline
+name: Release
+
+platform:
+  os: linux
+  arch: arm
+
+steps:
+  - name: Zip Library
+    image: alpine:3.15.2
+    commands:
+      - apk add zip jq
+      - cat haxelib.json | jq -r ". += {\"version\":\"${DRONE_TAG}\"}" > tmp && mv tmp haxelib.json
+      - zip -r library.zip src *.md haxelib.json README
+  - name: Haxelib Publish
+    image: haxe:4.2.4
+    commands:
+      - haxelib submit library.zip $HAXELIB_PASSWORD --always
+    environment:
+      HAXELIB_PASSWORD:
+        from_secret: HAXELIB_PASSWORD
+
+trigger:
+  event:
+  - tag
+
+depends_on:
+- Run Tests
 ---
 kind: signature
 hmac: 06ff8e13dd394e84e43b33ed738cbe868ba7b990b23e2d8ea89423d48df70be3
