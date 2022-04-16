@@ -1,4 +1,4 @@
-# haxe-permuation
+# haxe-permutation
 
 A simple libary tha provides a single `Permuter` class to generate all permutations for a provided array (Starting with the original).
 
