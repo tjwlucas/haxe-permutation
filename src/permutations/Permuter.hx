@@ -7,7 +7,8 @@ using permutations.Util;
     Uses Heap's algorithm to generate the permutations.
 
     WARNING:
-    As may be obvious, any given 
+    Any given array of length n will have n! permutations. As a result, looping through all permutations will
+    get *very* heavy for all but the shortest arrays (e.g. 6! = 720, 7! = 5040, 8! = 40320, 10! = 3628800 etc.).
 **/
 class Permuter<K> {
     var original : Array<K>;
