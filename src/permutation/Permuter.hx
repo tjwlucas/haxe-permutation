@@ -26,25 +26,36 @@ class Permuter<K> {
         itemLength = array.length;
         numberOfPermutations = itemLength.factorial();
 
-        for(i in 0...itemLength+1) {
+        for (i in 0...(itemLength + 1)) {
             c[i] = 0;
         }
     }
 
+    /**
+        The number of possible permutations covered by this permuter
+    **/
     public var length(get, never) : Int;
     function get_length() : Int {
         return numberOfPermutations;
     }
-    public function hasNext() {
+
+    /**
+        Returns true if there is next permutation.
+    **/
+    public function hasNext() : Bool {
         return currentItemIndex < numberOfPermutations;
     }
 
-    var i = 0;
-    public function next() {
+    var i : Int = 0;
+
+    /**
+        Returns the next permutation
+    **/
+    public function next() : Array<K> {
         var currentItem = nextItem.copy();
 
-        if(c[i] < i) {
-            if(i % 2 == 0) {
+        if (c[i] < i) {
+            if (i % 2 == 0) {
                 nextItem.swap(0, i);
             } else {
                 nextItem.swap(c[i], i);
@@ -56,7 +67,7 @@ class Permuter<K> {
             c[i] = 0;
             i++;
             next();
-        }        
+        }
 
         return currentItem;
     }

@@ -1,4 +1,5 @@
 package tests.cases;
+
 import utest.Assert;
 import utest.Test;
 using permutation.Util;
@@ -28,13 +29,13 @@ class UtilTest extends Test {
     }
 
     function specSwap() {
-        var test1 = [1,2,3,4,5];
-        test1.swap(0,3);
-        Assert.same([4,2,3,1,5], test1);
-        Assert.same([2,4,3,1,5], test1.swap(0,1));
+        var test1 = [1, 2, 3, 4, 5];
+        test1.swap(0, 3);
+        Assert.same([4, 2, 3, 1, 5], test1);
+        Assert.same([2, 4, 3, 1, 5], test1.swap(0, 1));
 
         var test2 = ['a', 'b', 'c', 'd', 'e'];
-        test2.swap(0,3);
+        test2.swap(0, 3);
         Assert.same(['d', 'b', 'c', 'a', 'e'], test2);
     }
 }

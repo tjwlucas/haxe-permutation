@@ -31,7 +31,7 @@ Duplicate entries are not considered, so:
 ```haxe	
 var example_array = [1,1,2];
 var permuter = new permutation.Permuter(example_array);
-for(permutation in permuter) {
+for (permutation in permuter) {
     trace(permutation);
 }
 ```
